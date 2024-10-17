@@ -30,9 +30,9 @@ class Program
 
             Console.WriteLine("3. Ta bort produkt");
 
-            Console.WriteLine("4. Avsluta");
-
             Console.WriteLine("4. Söka");
+
+            Console.WriteLine("5. Avsluta");
 
 
 
