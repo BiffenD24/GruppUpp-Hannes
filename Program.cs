@@ -28,7 +28,9 @@ class Program
 
             Console.WriteLine("2. Visa inventarie");
 
-            Console.WriteLine("3. Avsluta");
+            Console.WriteLine("3. Ta bort produkt");
+
+            Console.WriteLine("4. Avsluta");
 
             Console.WriteLine("4. Söka");
 
@@ -57,6 +59,7 @@ class Program
                     break;
 
                     case "4":
+
 
                     return;
 
@@ -122,6 +125,27 @@ class Program
         if (found == false)
         {
             Console.WriteLine("Produkten hittades inte");
+        }
+
+    }
+
+    static void TaBortProdukt()
+    {
+        Console.WriteLine("Skriv den produkt du vill ta bort");
+        string search = Console.ReadLine();
+
+        bool found = false;
+        for (int i = 0; i < inventory.Count; i++)
+        {
+            if (inventory[i].Contains(search))
+            {
+                inventory[i].Remove(i);
+                found = true;
+            }
+        }
+        if(found == false)
+        {
+            Console.WriteLine("Produkten du försöker ta bort existerar inte");
         }
 
     }
