@@ -55,10 +55,14 @@ class Program
                     break;
 
                 case "3":
+                    TaBortProdukt();
+                    break;
+                
+                case "4":
                     SearchProduct();
                     break;
 
-                    case "4":
+                    case "5":
 
 
                     return;
