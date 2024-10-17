@@ -16,7 +16,7 @@ class Program
 
         Console.WriteLine("Välkommen till Fabrikshanteringssystemet!");
 
-
+       
 
         while (true)
 
@@ -73,11 +73,12 @@ class Program
     }
 
     static void LäggTillProdukt()
-
     {
-
         // TODO: Implementera metod för att lägga till produkt 
 
+        Console.Write("Ange product att lägga till: ");
+        String productTillägg = Console.ReadLine();
+        inventory.Add(productTillägg);  
     }
 
     static void VisaInventarie()
