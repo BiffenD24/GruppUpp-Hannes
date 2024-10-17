@@ -52,11 +52,6 @@ class Program
                     break;
 
                 case "3":
-                    TaBortProdukt();
-
-                    break;
-
-                case "4":
 
 
                     return;
