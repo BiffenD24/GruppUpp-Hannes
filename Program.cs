@@ -84,7 +84,7 @@ class Program
         // TODO: Implementera metod för att lägga till produkt 
 
         Console.Write("Ange product att lägga till: ");
-        String productTillägg = Console.ReadLine();
+        String productTillägg = Console.ReadLine().ToLower();
         inventory.Add(productTillägg);  
     }
 
@@ -113,7 +113,7 @@ class Program
     static void SearchProduct()
     {
         Console.WriteLine("Vilken produkt vill du söka efter?");
-        String? search = Console.ReadLine();
+        String? search = Console.ReadLine().ToLower();
 
         bool found = false;
         for (int i = 0;i < inventory.Count; i++)
@@ -136,14 +136,14 @@ class Program
     static void TaBortProdukt()
     {
         Console.WriteLine("Skriv den produkt du vill ta bort");
-        string search = Console.ReadLine();
+        string search = Console.ReadLine().ToLower();
 
         bool found = false;
         for (int i = 0; i < inventory.Count; i++)
         {
             if (inventory[i].Contains(search))
             {
-                inventory[i].Remove(i);
+                inventory.Remove(search);
                 found = true;
             }
         }
